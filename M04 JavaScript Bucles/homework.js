@@ -179,29 +179,28 @@ function operadoresLogicos(num1, num2, num3) {
    }
 }
 
-function esPrimo(num) {
+function esPrimo(num) 
+{
    // Retornar true si "num" es primo.
    // De lo contrario retorna false.
    // [Pista 1]: un número primo sólo es divisible por sí mismo y por 1.
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if (num <= 1){
-      return false;
-   }
-   // Comprobamos si el número es divisible por algún número menor que él mismo
-   for (let i = 2; i < nun; i++) 
-   {
-      if (num % i === 0)
+
+   if (num == 0 || num == 1 || num == 4)
+    return false;
+
+	for (let i = 2; i < num / 2; i++)
+    {
+		if (num % i == 0)
        {
-         return false;
-       }
-      else 
-       {
-         return true;
-       }
-   }
+          return false;
+      }
+	 }
+	return true;
 }
+
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
